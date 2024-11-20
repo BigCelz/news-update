@@ -18,7 +18,7 @@ const NewsBoardComponent = ({ category }) => {
       <div className="row">
         {articles.map((news) => {
           return (
-            <div className="col-12 col-4 col-lg-3 col-sm-6 col-md-6" key={news.name}>
+            <div className="col-12 col-4 col-lg-3 col-sm-6 col-md-6" key={news.source.name}>
               <NewsItemComponent
                 title={news.title}
                 description={news.description}
