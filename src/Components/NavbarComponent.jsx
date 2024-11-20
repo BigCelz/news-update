@@ -5,7 +5,7 @@ const NavbarComponent = ({setCategory}) => {
   return (
     <Navbar expand="lg"  bg="dark" data-bs-theme="dark" >
     <Container>
-      <Navbar.Brand href="#home"><span className='badge bg-light text-dark fs-4'>News World</span></Navbar.Brand>
+      <Navbar.Brand href='/'><span className='badge bg-light text-dark fs-4'>News World</span></Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav " className=' border-0 shadow-none' />
       <Navbar.Collapse id="basic-navbar-nav ">
         <Nav className="me-auto">

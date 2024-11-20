@@ -5,7 +5,7 @@ const NewsBoardComponent = ({ category }) => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    let url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=a1719b1b483c49168169bc915af4b4e9 `;
+    let url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=a1719b1b483c49168169bc915af4b4e9`;
     fetch(url)
       .then((response) => response.json())
       .then((data) => setArticles(data.articles));
@@ -14,13 +14,12 @@ const NewsBoardComponent = ({ category }) => {
     <div>
       <h2 className="text-center mt-3 mb-4">
         Latest <span className="badge bg-danger">News</span>
-      </h2>
+      </h2> 
       <div className="row">
-        {articles.map((news, index) => {
+        {articles.map((news) => {
           return (
-            <div className="col-12 col-lg-3 col-sm-6 col-md-3">
+            <div className="col-12 col-4 col-lg-3 col-sm-6 col-md-6" key={news.name}>
               <NewsItemComponent
-                key={index}
                 title={news.title}
                 description={news.description}
                 src={news.urlToImage}

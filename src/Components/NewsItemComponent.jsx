@@ -5,9 +5,9 @@ import Card from "react-bootstrap/Card";
 import './NewsItemComponent.css'
 import image1 from '../Asset/news1.jpg'
 
-const NewsItemComponent = ({ title, description, src, url }) => {
+const NewsItemComponent = ({ title, description, src, url,key}) => {
   return (
-    <Container>
+    <Container key={key}>
       <Card className="bg-dark text-light mb-2 mx-3 my-3" >
         <Card.Img
           src={src?src:image1}
