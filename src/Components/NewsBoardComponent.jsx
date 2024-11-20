@@ -16,7 +16,7 @@ const NewsBoardComponent = ({ category }) => {
         Latest <span className="badge bg-danger">News</span>
       </h2> 
       <div className="row">
-        {articles.map((news,index) => {
+        {articles?.map((news,index) => {
           return (
             <div className="col-12 col-4 col-lg-3 col-sm-6 col-md-6" key={index}>
               <NewsItemComponent
